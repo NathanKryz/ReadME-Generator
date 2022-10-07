@@ -16,14 +16,17 @@ const questions = [
         name: 'projectDesc',
     },
     {
-        type: 'input',
+        type: 'list',
         message: 'What license do you want to use?',
+        choices: ["MIT", "ISC","IBM", "None"],
         name: 'license',
+        
     }
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
+    console.log(data.license);
     fs.writeFile(fileName, genMark(data), (err) =>
     err ? console.log(err) : console.log('Successfully created your readme'));
 }

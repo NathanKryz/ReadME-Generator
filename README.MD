@@ -1,8 +1,8 @@
-# kedme ren
+# hee hoo   [![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)
 
 ## Description
 
-  Oh no not this again
+  nope
 
 ## Table of Contents 
 - [Installation](#installation)
@@ -18,11 +18,8 @@
 
 ## License
 
-## License
-
-    MIT License stuff goes here
-        
-
+IBM License stuff goes here
+[IBM Public License Version 1.0]((https://opensource.org/licenses/IPL-1.0))
 ## Contributing
 
 ## Tests
