@@ -14,6 +14,8 @@ function renderLicenseBadge(license) {
         return `[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)`
       case 'IBM':
       return `[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)`
+      case 'Mozilla':
+      return `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`
       default:
         return '';
     }
@@ -35,7 +37,9 @@ function renderLicenseLink(license) {
       case 'ISC':
         return  `[ISC License](https://opensource.org/licenses/ISC)`
       case 'IBM':
-      return `[IBM Public License Version 1.0]((https://opensource.org/licenses/IPL-1.0))`
+      return `[IBM Public License Version 1.0](https://opensource.org/licenses/IPL-1.0)`
+      case 'Mozilla':
+      return `[Mozilla Public License 2.0](https://opensource.org/licenses/MPL-2.0)`
       default:
         return '';
     }
@@ -53,18 +57,21 @@ function renderLicenseSection(license) {
   else {
     switch(strlicense){
       case 'MIT':
-        return `## License
+        return `\n## License
 
-MIT License stuff goes here
-        `
+This repo is licensed by the MIT License\n`
       case 'ISC':
-        return `## License
+        return `\n## License
 
-ISC License stuff goes here`
+This repo is licensed by the ISC License\n`
       case 'IBM':
-      return `## License
+      return `\n## License
 
-IBM License stuff goes here`
+This repo is licensed by the IBM Public License Version 1.0\n`
+      case 'Mozilla':
+      return `\n## License
+
+This repo is licensed by the Mozilla Public License 2.0\n`
       default:
         return '';
     }
@@ -89,16 +96,27 @@ function generateMarkdown(data) {
 
 ## Installation
 
+${data.projectInstall}
+
 ## Usage
 
+${data.projectUsage}
 ${renderLicenseSection(data.license)}
 ${renderLicenseLink(data.license)}
 ## Contributing
 
+${data.projectContr}
+
 ## Tests
+
+${data.projectTest}
 
 ## Questions
 
+[${data.gitURL}](github.com/${data.gitURL})
+
+<${data.emailLink}>
+Feel free to contact me through e-mail or github if you have additional questions!
 `;
 }
 
