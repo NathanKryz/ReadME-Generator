@@ -1,6 +1,5 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
+//  A function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-// Slap this at the top, use the web link guide mhm
 function renderLicenseBadge(license) {
   let strlicense = license.toString();
   if (!license){
@@ -22,9 +21,8 @@ function renderLicenseBadge(license) {
   }
 }
 
-// TODO: Create a function that returns the license link
+//  Created a function that returns the license link
 // If there is no license, return an empty string
-// Link to the license page, put this under the license words?
 function renderLicenseLink(license) {
   let strlicense = license.toString();
   if (!license){
@@ -46,9 +44,8 @@ function renderLicenseLink(license) {
   }
 }
 
-// TODO: Create a function that returns the license section of README
+// Created a function that returns the license section of README
 // If there is no license, return an empty string
-// Put just a little bit 'This project is licensed by blah blah blah'
 function renderLicenseSection(license) {
   let strlicense = license.toString();
   if (!license){
@@ -78,7 +75,7 @@ This repo is licensed by the Mozilla Public License 2.0\n`
   }
 }
 
-// TODO: Create a function to generate markdown for README
+// A function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}   ${renderLicenseBadge(data.license)}
 
